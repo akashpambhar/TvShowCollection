@@ -30,5 +30,9 @@ public partial class _Default : System.Web.UI.Page
 
         rptTab21.DataSource = showList.OrderByDescending(x => x.Premiered).ToList().Take(9);
         rptTab21.DataBind();
+
+        var actorList = TVMazeAPI.GetActorsList();
+        rptCelebrities.DataSource = actorList.OrderByDescending(x => x.Updated).ToList().Take(9);
+        rptCelebrities.DataBind();
     }
 }
