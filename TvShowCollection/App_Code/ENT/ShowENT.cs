@@ -18,8 +18,8 @@ namespace TvShowCollection.ENT
         #endregion Constructor
 
         #region Id
-        protected Int32 _Id;
-        public Int32 Id
+        protected String _Id;
+        public String Id
         {
             get
             {
@@ -76,5 +76,116 @@ namespace TvShowCollection.ENT
             }
         }
         #endregion Genres
+
+        #region Image
+        protected Image _Image;
+        public Image Image
+        {
+            get
+            {
+                return _Image;
+            }
+            set
+            {
+                _Image = value;
+            }
+        }
+        #endregion Image
+
+        #region Rating
+        protected Rating _Rating;
+        public Rating Rating
+        {
+            get
+            {
+                return _Rating;
+            }
+            set
+            {
+                _Rating = value;
+            }
+        }
+        #endregion Rating
+
+        #region Weight
+        protected String _Weight;
+        public String Weight
+        {
+            get
+            {
+                return _Weight;
+            }
+            set
+            {
+                _Weight = value;
+            }
+        }
+        #endregion Weight
+
+        #region Updated
+        protected String _Updated;
+        public String Updated
+        {
+            get
+            {
+                return _Updated;
+            }
+            set
+            {
+                _Updated = value;
+            }
+        }
+        #endregion Updated
+    }
+
+    public class Image
+    {
+        #region Medium
+        protected String _Medium;
+        public String Medium
+        {
+            get
+            {
+                return _Medium;
+            }
+            set
+            {
+                _Medium = value;
+            }
+        }
+        #endregion Medium
+
+        #region Original
+        protected String _Original;
+        public String Original
+        {
+            get
+            {
+                return _Original;
+            }
+            set
+            {
+                _Original = value;
+            }
+        }
+        #endregion Original
+    }
+
+    public class Rating
+    {
+        #region Average
+        protected String _Average;
+        public String Average
+        {
+            get
+            {
+                return _Average;
+            }
+            set
+            {
+                _Average = value;
+            }
+        }
+        #endregion Average
     }
 }
