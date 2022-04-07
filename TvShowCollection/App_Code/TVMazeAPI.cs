@@ -48,4 +48,22 @@ public static class TVMazeAPI
 
         return entActor;
     }
+
+    public static ShowENT GetShowDetails(String ShowID)
+    {
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+        String serviceUrl = "https://api.tvmaze.com/shows/" + ShowID;
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceUrl);
+        request.ContentType = "application/json; charset=utf-8";
+        request.Method = "GET";
+
+        HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
+        String strResponse = new StreamReader(httpResponse.GetResponseStream()).ReadToEnd();
+        String json = strResponse;
+
+        ShowENT entShow = JsonConvert.DeserializeObject<ShowENT>(json);
+
+        return entShow;
+    }
 }

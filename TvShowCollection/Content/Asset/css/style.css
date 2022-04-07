@@ -5653,7 +5653,7 @@ ul {
   position: absolute;
   content: '';
   width: 100%;
-  height: 100%;
+  height: 70%;
   background-color: rgba(0, 0, 0, 0.75);
 }
 /*movie single hero*/
@@ -5663,7 +5663,7 @@ ul {
 }
 /*series single hero*/
 .sr-single-hero {
-  background: url('../images/uploads/sr-single.jpg') no-repeat;
+  /*background: url('../images/uploads/sr-single.jpg') no-repeat;*/
   height: 598px;
 }
 .hero3 {

@@ -165,7 +165,7 @@
                                                             <asp:Image runat="server" ImageUrl="<%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Image.Medium %>" alt="" Width="185" Height="284" />
                                                         </div>
                                                         <div class="hvr-inner">
-                                                            <asp:HyperLink runat="server" NavigateUrl="moviesingle.html">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
+                                                            <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'>Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                         </div>
                                                         <div class="title-in">
                                                             <h6>

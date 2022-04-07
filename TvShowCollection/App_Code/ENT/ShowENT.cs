@@ -151,6 +151,21 @@ namespace TvShowCollection.ENT
             }
         }
         #endregion Premiered
+
+        #region Summary
+        protected String _Summary;
+        public String Summary
+        {
+            get
+            {
+                return _Summary;
+            }
+            set
+            {
+                _Summary = value;
+            }
+        }
+        #endregion Summary
     }
 
     public class Image
