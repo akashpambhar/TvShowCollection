@@ -19,8 +19,7 @@
 
     <!-- CSS files -->
     <link rel="stylesheet" href="<%= ResolveUrl("~/Content/Asset/css/plugins.css")%>" />
-    <link rel="stylesheet" href="<%= ResolveUrl("~/Content/Asset/css/style.min.css")%>" />
-    <%--<link href="~/Content/Asset/css/style.css" rel="stylesheet" />--%>
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Content/Asset/css/style.css")%>" />
 
     <%--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -31,7 +30,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header class="ht-header" style="background-color: black;">
+        <header class="ht-header">
             <div class="container">
                 <nav class="navbar navbar-default navbar-custom">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -101,7 +100,7 @@
         </header>
 
 
-        <div class="slider movie-items">
+        <%--<div class="slider movie-items">
             <div class="container">
                 <div class="row">
                     <div class="social-link">
@@ -112,138 +111,167 @@
                         <asp:HyperLink runat="server" href="#"><i class="ion-social-youtube"></i></asp:HyperLink>
                     </div>
                     <div class="slick-multiItemSlider">
+                        <asp:Repeater ID="Repeater1" runat="server">
+                            <ItemTemplate>
+                                <div class="movie-item">
+                                    <div class="mv-img">
+                                        <asp:HyperLink runat="server" href="#">
+                                    <asp:Image runat="server" ImageUrl="~/Content/Asset/images/uploads/slider1.jpg" alt="" Width="285" Height="437" /></asp:HyperLink>
+                                    </div>
+                                    <div class="title-in">
+                                        <div class="cate">
+                                            <span class="blue">
+                                                <asp:HyperLink runat="server" href="#">Sci-fi</asp:HyperLink></span>
+                                        </div>
+                                        <h6>
+                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
+                                        <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
                         <div class="movie-item">
                             <div class="mv-img">
-                                <a href="#">
-                                    <asp:Image runat="server" ImageUrl="~/Content/Asset/images/uploads/slider1.jpg" alt="" Width="285" Height="437" /></a>
+                                <asp:HyperLink runat="server" href="#">
+                                    <asp:Image runat="server" src="images/uploads/slider2.jpg" alt="" width="285" height="437" /></asp:HyperLink>
                             </div>
                             <div class="title-in">
                                 <div class="cate">
-                                    <span class="blue"><a href="#">Sci-fi</a></span>
+                                    <span class="yell">
+                                        <asp:HyperLink runat="server" href="#">action</asp:HyperLink></span>
                                 </div>
-                                <h6><a href="#">Interstellar</a></h6>
+                                <h6>
+                                    <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                 <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                             </div>
                         </div>
                         <div class="movie-item">
                             <div class="mv-img">
-                                <a href="#">
-                                    <img src="images/uploads/slider2.jpg" alt="" width="285" height="437"></a>
+                                <asp:HyperLink runat="server" href="#">
+                                    <asp:Image runat="server" src="images/uploads/slider3.jpg" alt="" width="285" height="437" /></asp:HyperLink>
                             </div>
                             <div class="title-in">
                                 <div class="cate">
-                                    <span class="yell"><a href="#">action</a></span>
+                                    <span class="green">
+                                        <asp:HyperLink runat="server" href="#">comedy</asp:HyperLink></span>
                                 </div>
-                                <h6><a href="#">The revenant</a></h6>
+                                <h6>
+                                    <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                 <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                             </div>
                         </div>
                         <div class="movie-item">
                             <div class="mv-img">
-                                <a href="#">
-                                    <img src="images/uploads/slider3.jpg" alt="" width="285" height="437"></a>
+                                <asp:HyperLink runat="server" href="#">
+                                    <asp:Image runat="server" src="images/uploads/slider4.jpg" alt="" width="285" height="437" /></asp:HyperLink>
                             </div>
                             <div class="title-in">
                                 <div class="cate">
-                                    <span class="green"><a href="#">comedy</a></span>
+                                    <span class="blue">
+                                        <asp:HyperLink runat="server" href="#">Sci-fi</asp:HyperLink></span> <span class="orange">
+                                            <asp:HyperLink runat="server" href="#">advanture</asp:HyperLink></span>
                                 </div>
-                                <h6><a href="#">Die hard</a></h6>
+                                <h6>
+                                    <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                 <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                             </div>
                         </div>
                         <div class="movie-item">
                             <div class="mv-img">
-                                <a href="#">
-                                    <img src="images/uploads/slider4.jpg" alt="" width="285" height="437"></a>
+                                <asp:HyperLink runat="server" href="#">
+                                    <asp:Image runat="server" src="images/uploads/slider1.jpg" alt="" width="285" height="437" /></asp:HyperLink>
                             </div>
                             <div class="title-in">
                                 <div class="cate">
-                                    <span class="blue"><a href="#">Sci-fi</a></span> <span class="orange"><a href="#">advanture</a></span>
+                                    <span class="blue">
+                                        <asp:HyperLink runat="server" href="#">Sci-fi</asp:HyperLink></span>
                                 </div>
-                                <h6><a href="#">The walk</a></h6>
+                                <h6>
+                                    <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                 <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                             </div>
                         </div>
                         <div class="movie-item">
                             <div class="mv-img">
-                                <a href="#">
-                                    <img src="images/uploads/slider1.jpg" alt="" width="285" height="437"></a>
+                                <asp:HyperLink runat="server" href="#">
+                                    <asp:Image runat="server" src="images/uploads/slider2.jpg" alt="" width="285" height="437" /></asp:HyperLink>
                             </div>
                             <div class="title-in">
                                 <div class="cate">
-                                    <span class="blue"><a href="#">Sci-fi</a></span>
+                                    <span class="yell">
+                                        <asp:HyperLink runat="server" href="#">action</asp:HyperLink></span>
                                 </div>
-                                <h6><a href="#">Interstellar</a></h6>
+                                <h6>
+                                    <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                 <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                             </div>
                         </div>
                         <div class="movie-item">
                             <div class="mv-img">
-                                <a href="#">
-                                    <img src="images/uploads/slider2.jpg" alt="" width="285" height="437"></a>
+                                <asp:Image runat="server" src="images/uploads/slider3.jpg" alt="" Width="285" Height="437" />
                             </div>
                             <div class="title-in">
                                 <div class="cate">
-                                    <span class="yell"><a href="#">action</a></span>
+                                    <span class="green">
+                                        <asp:HyperLink runat="server" href="#">comedy</asp:HyperLink></span>
                                 </div>
-                                <h6><a href="#">The revenant</a></h6>
+                                <h6>
+                                    <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                 <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                             </div>
                         </div>
                         <div class="movie-item">
                             <div class="mv-img">
-                                <img src="images/uploads/slider3.jpg" alt="" width="285" height="437">
+                                <asp:Image runat="server" src="images/uploads/slider4.jpg" alt="" Width="285" Height="437" />
                             </div>
                             <div class="title-in">
                                 <div class="cate">
-                                    <span class="green"><a href="#">comedy</a></span>
+                                    <span class="blue">
+                                        <asp:HyperLink runat="server" href="#">Sci-fi</asp:HyperLink></span> <span class="orange">
+                                            <asp:HyperLink runat="server" href="#">advanture</asp:HyperLink></span>
                                 </div>
-                                <h6><a href="#">Die hard</a></h6>
+                                <h6>
+                                    <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                 <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                             </div>
                         </div>
                         <div class="movie-item">
                             <div class="mv-img">
-                                <img src="images/uploads/slider4.jpg" alt="" width="285" height="437">
+                                <asp:Image runat="server" src="images/uploads/slider3.jpg" alt="" Width="285" Height="437" />
                             </div>
                             <div class="title-in">
                                 <div class="cate">
-                                    <span class="blue"><a href="#">Sci-fi</a></span> <span class="orange"><a href="#">advanture</a></span>
+                                    <span class="green">
+                                        <asp:HyperLink runat="server" href="#">comedy</asp:HyperLink></span>
                                 </div>
-                                <h6><a href="#">The walk</a></h6>
-                                <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
-                            </div>
-                        </div>
-                        <div class="movie-item">
-                            <div class="mv-img">
-                                <img src="images/uploads/slider3.jpg" alt="" width="285" height="437">
-                            </div>
-                            <div class="title-in">
-                                <div class="cate">
-                                    <span class="green"><a href="#">comedy</a></span>
-                                </div>
-                                <h6><a href="#">Die hard</a></h6>
+                                <h6>
+                                    <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                 <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="movie-items">
+        </div>--%>
+        <%--<div class="movie-items">
             <div class="container">
                 <div class="row ipad-width">
                     <div class="col-md-8">
                         <div class="title-hd">
                             <h2>in theater</h2>
-                            <a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+                            <asp:HyperLink runat="server" href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></asp:HyperLink>
                         </div>
                         <div class="tabs">
                             <ul class="tab-links">
-                                <li class="active"><a href="#tab1">#Popular</a></li>
-                                <li><a href="#tab2">#Coming soon</a></li>
-                                <li><a href="#tab3">#Top rated  </a></li>
-                                <li><a href="#tab4">#Most reviewed</a></li>
+                                <li class="active">
+                                    <asp:HyperLink runat="server" href="#tab1">#Popular</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" href="#tab2">#Coming soon</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" href="#tab3">#Top rated  </asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" href="#tab4">#Most reviewed</asp:HyperLink></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="tab1" class="tab active">
@@ -252,13 +280,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item1.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item1.jpg" alt="" Width="185" Height="284" />
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -266,13 +295,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item2.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item2.jpg" alt="" Width="185" Height="284" />
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -280,13 +310,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284" />
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -294,13 +325,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item4.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item4.jpg" alt="" Width="185" Height="284" />
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -308,13 +340,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item5.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item5.jpg" alt="" Width="185" Height="284" />
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -322,13 +355,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item6.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item6.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -336,13 +370,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item7.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item7.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -350,13 +385,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item8.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item8.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -364,13 +400,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -384,13 +421,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item5.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item5.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -398,13 +436,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item6.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item6.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -412,13 +451,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item7.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item7.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -426,13 +466,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item8.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item8.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -440,13 +481,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -460,13 +502,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item1.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item1.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -474,13 +517,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item2.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item2.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -488,13 +532,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -502,13 +547,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item4.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item4.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -516,13 +562,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -536,13 +583,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item5.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item5.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -550,13 +598,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item6.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item6.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -564,13 +613,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item7.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item7.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -578,13 +628,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item8.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item8.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -592,13 +643,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -610,14 +662,18 @@
                         </div>
                         <div class="title-hd">
                             <h2>on tv</h2>
-                            <a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+                            <asp:HyperLink runat="server" href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></asp:HyperLink>
                         </div>
                         <div class="tabs">
                             <ul class="tab-links-2">
-                                <li><a href="#tab21">#Popular</a></li>
-                                <li class="active"><a href="#tab22">#Coming soon</a></li>
-                                <li><a href="#tab23">#Top rated  </a></li>
-                                <li><a href="#tab24">#Most reviewed</a></li>
+                                <li>
+                                    <asp:HyperLink runat="server" href="#tab21">#Popular</asp:HyperLink></li>
+                                <li class="active">
+                                    <asp:HyperLink runat="server" href="#tab22">#Coming soon</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" href="#tab23">#Top rated  </asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" href="#tab24">#Most reviewed</asp:HyperLink></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="tab21" class="tab">
@@ -626,13 +682,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item1.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item1.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -640,13 +697,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item2.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item2.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -654,13 +712,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -668,13 +727,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item4.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item4.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -682,13 +742,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -702,13 +763,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item5.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item5.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -716,13 +778,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item6.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item6.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -730,13 +793,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item7.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item7.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -744,13 +808,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item8.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item8.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -758,13 +823,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item1.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item1.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -772,13 +838,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item2.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item2.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -786,13 +853,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -800,13 +868,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item4.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item4.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -814,13 +883,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item5.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item5.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -828,13 +898,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item6.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item6.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -848,13 +919,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item1.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item1.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -862,13 +934,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item2.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item2.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -876,13 +949,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -890,13 +964,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item4.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item4.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -904,13 +979,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item5.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item5.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -918,13 +994,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item6.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item6.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -932,13 +1009,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item7.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item7.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -946,13 +1024,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item8.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item8.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -960,13 +1039,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -980,13 +1060,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item5.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item5.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Interstellar</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Interstellar</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -994,13 +1075,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item6.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item6.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The revenant</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The revenant</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -1008,13 +1090,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item7.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item7.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -1022,13 +1105,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item8.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item8.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">The walk</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">The walk</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -1036,13 +1120,14 @@
                                             <div class="slide-it">
                                                 <div class="movie-item">
                                                     <div class="mv-img">
-                                                        <img src="images/uploads/mv-item3.jpg" alt="" width="185" height="284">
+                                                        <asp:Image runat="server" src="images/uploads/mv-item3.jpg" alt="" Width="185" Height="284">
                                                     </div>
                                                     <div class="hvr-inner">
-                                                        <a href="#">Read more <i class="ion-android-arrow-dropright"></i></a>
+                                                        <asp:HyperLink runat="server" href="#">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                     </div>
                                                     <div class="title-in">
-                                                        <h6><a href="#">Die hard</a></h6>
+                                                        <h6>
+                                                            <asp:HyperLink runat="server" href="#">Die hard</asp:HyperLink></h6>
                                                         <p><i class="ion-android-star"></i><span>7.4</span> /10</p>
                                                     </div>
                                                 </div>
@@ -1056,49 +1141,53 @@
                     <div class="col-md-4">
                         <div class="sidebar">
                             <div class="ads">
-                                <img src="images/uploads/ads1.png" alt="" width="336" height="296">
+                                <asp:Image runat="server" src="images/uploads/ads1.png" alt="" Width="336" Height="296">
                             </div>
                             <div class="celebrities">
                                 <h4 class="sb-title">Spotlight Celebrities</h4>
                                 <div class="celeb-item">
-                                    <a href="#">
-                                        <img src="images/uploads/ava1.jpg" alt="" width="70" height="70"></a>
+                                    <asp:HyperLink runat="server" href="#">
+                                        <asp:Image runat="server" src="images/uploads/ava1.jpg" alt="" width="70" height="70"></asp:HyperLink>
                                     <div class="celeb-author">
-                                        <h6><a href="#">Samuel N. Jack</a></h6>
+                                        <h6>
+                                            <asp:HyperLink runat="server" href="#">Samuel N. Jack</asp:HyperLink></h6>
                                         <span>Actor</span>
                                     </div>
                                 </div>
                                 <div class="celeb-item">
-                                    <a href="#">
-                                        <img src="images/uploads/ava2.jpg" alt="" width="70" height="70"></a>
+                                    <asp:HyperLink runat="server" href="#">
+                                        <asp:Image runat="server" src="images/uploads/ava2.jpg" alt="" width="70" height="70"></asp:HyperLink>
                                     <div class="celeb-author">
-                                        <h6><a href="#">Benjamin Carroll</a></h6>
+                                        <h6>
+                                            <asp:HyperLink runat="server" href="#">Benjamin Carroll</asp:HyperLink></h6>
                                         <span>Actor</span>
                                     </div>
                                 </div>
                                 <div class="celeb-item">
-                                    <a href="#">
-                                        <img src="images/uploads/ava3.jpg" alt="" width="70" height="70"></a>
+                                    <asp:HyperLink runat="server" href="#">
+                                        <asp:Image runat="server" src="images/uploads/ava3.jpg" alt="" width="70" height="70"></asp:HyperLink>
                                     <div class="celeb-author">
-                                        <h6><a href="#">Beverly Griffin</a></h6>
+                                        <h6>
+                                            <asp:HyperLink runat="server" href="#">Beverly Griffin</asp:HyperLink></h6>
                                         <span>Actor</span>
                                     </div>
                                 </div>
                                 <div class="celeb-item">
-                                    <a href="#">
-                                        <img src="images/uploads/ava4.jpg" alt="" width="70" height="70"></a>
+                                    <asp:HyperLink runat="server" href="#">
+                                        <asp:Image runat="server" src="images/uploads/ava4.jpg" alt="" width="70" height="70"></asp:HyperLink>
                                     <div class="celeb-author">
-                                        <h6><a href="#">Justin Weaver</a></h6>
+                                        <h6>
+                                            <asp:HyperLink runat="server" href="#">Justin Weaver</asp:HyperLink></h6>
                                         <span>Actor</span>
                                     </div>
                                 </div>
-                                <a href="#" class="btn">See all celebrities<i class="ion-ios-arrow-right"></i></a>
+                                <asp:HyperLink runat="server" href="#" class="btn">See all celebrities<i class="ion-ios-arrow-right"></i></asp:HyperLink>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
 
 
 
