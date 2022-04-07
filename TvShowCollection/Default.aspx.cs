@@ -27,5 +27,8 @@ public partial class _Default : System.Web.UI.Page
 
         rptTab3.DataSource = showList.OrderByDescending(x => x.Updated).ToList().Take(9);
         rptTab3.DataBind();
+
+        rptTab21.DataSource = showList.OrderByDescending(x => x.Premiered).ToList().Take(9);
+        rptTab21.DataBind();
     }
 }
