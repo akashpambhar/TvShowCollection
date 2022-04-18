@@ -18,7 +18,7 @@
                         <ItemTemplate>
                             <div class="movie-item">
                                 <div class="mv-img">
-                                    <asp:HyperLink runat="server" href="#">
+                                    <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'>
                                     <asp:Image runat="server" ImageUrl="<%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Image.Medium %>" alt="" Width="285" Height="437" CssClass="img-fluid"/></asp:HyperLink>
                                 </div>
                                 <div class="title-in">
@@ -26,7 +26,7 @@
                                         <asp:Repeater runat="server" DataSource="<%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Genres %>">
                                             <ItemTemplate>
                                                 <span class="blue" style="margin-right: 3px;">
-                                                    <asp:HyperLink runat="server" href="#">
+                                                    <asp:HyperLink runat="server">
                                                     <%# (Container.DataItem) %>
                                                     </asp:HyperLink>
                                                 </span>
@@ -39,7 +39,7 @@
                                         </span>--%>
                                     </div>
                                     <h6>
-                                        <asp:HyperLink runat="server" href="#"><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
+                                        <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
                                     <p><i class="ion-android-star"></i><span><%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Rating.Average.ToString() %></span> /10</p>
                                 </div>
                             </div>
@@ -79,11 +79,11 @@
                                                             <asp:Image runat="server" ImageUrl="<%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Image.Medium %>" alt="" Width="185" Height="284" />
                                                         </div>
                                                         <div class="hvr-inner">
-                                                            <asp:HyperLink runat="server" NavigateUrl="moviesingle.html">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
+                                                            <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'>Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                         </div>
                                                         <div class="title-in">
                                                             <h6>
-                                                                <asp:HyperLink runat="server" NavigateUrl="#"><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
+                                                                <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
                                                             <p><i class="ion-android-star"></i><span><%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Rating.Average.ToString() %></span> /10</p>
                                                         </div>
                                                     </div>
@@ -104,11 +104,11 @@
                                                             <asp:Image runat="server" ImageUrl="<%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Image.Medium %>" alt="" Width="185" Height="284" />
                                                         </div>
                                                         <div class="hvr-inner">
-                                                            <asp:HyperLink runat="server" NavigateUrl="moviesingle.html">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
+                                                            <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'>Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                         </div>
                                                         <div class="title-in">
                                                             <h6>
-                                                                <asp:HyperLink runat="server" NavigateUrl="#"><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
+                                                                <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
                                                             <p><i class="ion-android-star"></i><span><%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Rating.Average.ToString() %></span> /10</p>
                                                         </div>
                                                     </div>
@@ -129,11 +129,11 @@
                                                             <asp:Image runat="server" ImageUrl="<%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Image.Medium %>" alt="" Width="185" Height="284" />
                                                         </div>
                                                         <div class="hvr-inner">
-                                                            <asp:HyperLink runat="server" NavigateUrl="moviesingle.html">Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
+                                                            <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'>Read more <i class="ion-android-arrow-dropright"></i></asp:HyperLink>
                                                         </div>
                                                         <div class="title-in">
                                                             <h6>
-                                                                <asp:HyperLink runat="server" NavigateUrl="#"><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
+                                                                <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
                                                             <p><i class="ion-android-star"></i><span><%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Rating.Average.ToString() %></span> /10</p>
                                                         </div>
                                                     </div>
@@ -169,7 +169,7 @@
                                                         </div>
                                                         <div class="title-in">
                                                             <h6>
-                                                                <asp:HyperLink runat="server" NavigateUrl="#"><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
+                                                                <asp:HyperLink runat="server" NavigateUrl='<%# "~/Show/" + Eval("id").ToString() %>'><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
                                                             <p><i class="ion-android-star"></i><span><%# ((TvShowCollection.ENT.ShowENT)Container.DataItem).Rating.Average.ToString() %></span> /10</p>
                                                         </div>
                                                     </div>
@@ -196,7 +196,7 @@
                                             <asp:Image runat="server" ImageUrl="<%# ((TvShowCollection.ENT.ActorENT)Container.DataItem).Image.Medium %>" alt="" width="70" height="90"/></asp:HyperLink>
                                         <div class="celeb-author">
                                             <h6>
-                                                <asp:HyperLink runat="server" NavigateUrl="#"><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
+                                                <asp:HyperLink runat="server"><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>
                                             <%--<span>Actor</span>--%>
                                         </div>
                                     </div>
