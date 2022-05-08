@@ -80,8 +80,26 @@ public static class TVMazeAPI
         String strResponse = new StreamReader(httpResponse.GetResponseStream()).ReadToEnd();
         String json = strResponse;
 
-        List<CastENT> entActor = JsonConvert.DeserializeObject<List<CastENT>>(json);
+        List<CastENT> entCast = JsonConvert.DeserializeObject<List<CastENT>>(json);
 
-        return entActor;
+        return entCast;
+    }
+
+    public static List<CrewENT> GetShowCrew(String ShowID)
+    {
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+        String serviceUrl = "https://api.tvmaze.com/shows/" + ShowID + "/crew";
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceUrl);
+        request.ContentType = "application/json; charset=utf-8";
+        request.Method = "GET";
+
+        HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
+        String strResponse = new StreamReader(httpResponse.GetResponseStream()).ReadToEnd();
+        String json = strResponse;
+
+        List<CrewENT> entCrew = JsonConvert.DeserializeObject<List<CrewENT>>(json);
+
+        return entCrew;
     }
 }

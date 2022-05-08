@@ -66,7 +66,7 @@
                                                                     <div class="cast-it">
                                                                         <div class="cast-left">
                                                                             <img src="images/uploads/cast1.jpg" alt="">
-                                                                            <a style="cursor:default;"><%# ((TvShowCollection.ENT.CastENT)Container.DataItem).Character.Name.ToString() %></a>
+                                                                            <a style="cursor: default;"><%# ((TvShowCollection.ENT.CastENT)Container.DataItem).Character.Name.ToString() %></a>
                                                                         </div>
                                                                         <p>...  <%# ((TvShowCollection.ENT.CastENT)Container.DataItem).Actor.Name.ToString() %></p>
                                                                     </div>
@@ -74,12 +74,18 @@
                                                             </asp:Repeater>
                                                         </div>
                                                         <!-- movie user review -->
-                                                        
+
                                                     </div>
                                                     <div class="col-md-4 col-xs-12 col-sm-12">
                                                         <div class="sb-it">
                                                             <h6>Director: </h6>
-                                                            <p><a href="#">Mark Cendrowski</a></p>
+                                                            <p>
+                                                                <asp:Repeater runat="server" ID="rptDirectors" >
+                                                                    <ItemTemplate>
+                                                                        <%--<a href="#"><%# ((TvShowCollection.ENT.ActorENT)Container.DataItem).Name.ToString() %></a>--%>
+                                                                    </ItemTemplate>
+                                                                </asp:Repeater>
+                                                            </p>
                                                         </div>
                                                         <div class="sb-it">
                                                             <h6>Writer: </h6>
