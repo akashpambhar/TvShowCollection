@@ -6,6 +6,7 @@ using System.Net;
 using System.Web;
 using TvShowCollection.ENT;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Data;
 
 /// <summary>
@@ -27,6 +28,26 @@ public static class TVMazeAPI
         String json = strResponse;
 
         List<ShowENT> entShow = JsonConvert.DeserializeObject<List<ShowENT>>(json);
+
+        return entShow;
+    }
+
+    public static List<ShowENT> GetShowsListByQuery(String Query)
+    {
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+        String serviceUrl = "https://api.tvmaze.com/search/shows?q=" + Query;
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceUrl);
+        request.ContentType = "application/json; charset=utf-8";
+        request.Method = "GET";
+
+        HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
+        String strResponse = new StreamReader(httpResponse.GetResponseStream()).ReadToEnd();
+        String json = strResponse;
+
+        List<SearchShowENT> parsedObj = JsonConvert.DeserializeObject<List<SearchShowENT>>(json);
+
+        List<ShowENT> entShow = parsedObj.Select(x => x.Show).ToList();
 
         return entShow;
     }

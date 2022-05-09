@@ -57,10 +57,10 @@
                                 </asp:HyperLink>
                             </li>
                             <li class="dropdown first">
-                                <asp:HyperLink runat="server" CssClass="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">Shows
+                                <asp:HyperLink runat="server" NavigateUrl="~/Show" CssClass="btn btn-default">Shows
                                 </asp:HyperLink>
                             </li>
-                            <li class="dropdown first">
+                            <%--<li class="dropdown first">
                                 <asp:HyperLink runat="server" CssClass="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">Celebrities
                                 </asp:HyperLink>
                             </li>
@@ -75,27 +75,30 @@
                             <li class="dropdown first">
                                 <asp:HyperLink runat="server" CssClass="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">Inquiry
                                 </asp:HyperLink>
-                            </li>
+                            </li>--%>
                         </ul>
-                        <ul class="nav navbar-nav flex-child-menu menu-right">
+                        <%--<ul class="nav navbar-nav flex-child-menu menu-right">
                             <li class="loginLink">
                                 <asp:HyperLink runat="server" NavigateUrl="#">LOG In</asp:HyperLink></li>
                             <li class="btn signupLink">
                                 <asp:HyperLink runat="server" NavigateUrl="#">sign up</asp:HyperLink></li>
-                        </ul>
+                        </ul>--%>
                     </div>
 
                     <!-- /.navbar-collapse -->
                 </nav>
 
                 <!-- top search form -->
-                <div class="top-search">
-                    <select>
-                        <option value="united">TV show</option>
-                        <option value="saab">Others</option>
-                    </select>
-                    <asp:TextBox type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for" runat="server" />
-                </div>
+                <asp:Panel runat="server" DefaultButton="btnSearch">
+                    <div class="top-search">
+                        <select>
+                            <option value="united">TV show</option>
+                        </select>
+                        <asp:TextBox ID="txtSearch" type="text" placeholder="Search for the TV Show that you are looking for" runat="server" />
+                        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Style="display: none" />
+                    </div>
+                </asp:Panel>
+
             </div>
         </header>
 

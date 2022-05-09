@@ -56,7 +56,7 @@
                 <div class="col-md-8">
                     <div class="title-hd">
                         <h2>Explore</h2>
-                        <asp:HyperLink runat="server" NavigateUrl="#" CssClass="viewall">View all <i class="ion-ios-arrow-right"></i></asp:HyperLink>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Show" CssClass="viewall">View all <i class="ion-ios-arrow-right"></i></asp:HyperLink>
                     </div>
                     <div class="tabs">
                         <ul class="tab-links">
@@ -147,7 +147,7 @@
                     </div>
                     <div class="title-hd">
                         <h2>Recents</h2>
-                        <asp:HyperLink runat="server" NavigateUrl="#" CssClass="viewall">View all <i class="ion-ios-arrow-right"></i></asp:HyperLink>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Show" CssClass="viewall">View all <i class="ion-ios-arrow-right"></i></asp:HyperLink>
                     </div>
                     <div class="tabs">
                         <ul class="tab-links-2">
@@ -193,7 +193,7 @@
                                 <ItemTemplate>
                                     <div class="celeb-item">
                                         <asp:HyperLink runat="server" NavigateUrl="#">
-                                            <asp:Image runat="server" ImageUrl="<%# ((TvShowCollection.ENT.ActorENT)Container.DataItem).Image.Medium %>" alt="" width="70" height="90"/></asp:HyperLink>
+                                            <asp:Image runat="server" ImageUrl='<%# ((TvShowCollection.ENT.ActorENT)Container.DataItem).Image != null ? ((TvShowCollection.ENT.ActorENT)Container.DataItem).Image.Medium : "" %>' alt="" width="70" height="90"/></asp:HyperLink>
                                         <div class="celeb-author">
                                             <h6>
                                                 <asp:HyperLink runat="server"><%# Eval("name").ToString().Trim() %></asp:HyperLink></h6>

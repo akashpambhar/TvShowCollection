@@ -44,19 +44,6 @@ public partial class AdminPanel_SingleShow : System.Web.UI.Page
             List<CastENT> entCast = TVMazeAPI.GetShowCast(ShowID);
             rptCast.DataSource = entCast;
             rptCast.DataBind();
-
-
-            Repeater rptDirectors = (Repeater)e.Item.FindControl("rptDirectors");
-            List<CrewENT> entCrew = TVMazeAPI.GetShowCrew(ShowID);
-            CrewENT Crew = (CrewENT)(entCrew.GroupBy(x => x.Type).Select(group => new CrewENT()
-            {
-                Type = group.Key,
-                Actor = group.Select(x => x.Actor).ToList()
-            }).Where(x => x.Type.Equals("Creator")).ToList()[0]);
-            rptDirectors.DataSource = new Object[] { Crew };
-            rptDirectors.DataBind();
-
-            Response.Write(Crew);
         }
 
 

@@ -11,4 +11,9 @@ public partial class Content_AdminPanel : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Show/Search/" + txtSearch.Text.Trim());
+    }
 }

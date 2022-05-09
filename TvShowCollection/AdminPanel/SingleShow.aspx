@@ -29,7 +29,7 @@
                                     <div class="tabs">
                                         <ul class="tab-links tabs-mv tabs-series">
                                             <li class="active"><a href="#overview">Overview</a></li>
-                                            <li><a href="#cast">Cast & Crew </a></li>
+                                            <%--<li><a href="#cast">Cast & Crew </a></li>--%>
                                         </ul>
                                         <div class="tab-content">
                                             <div id="overview" class="tab active">
@@ -55,10 +55,10 @@
                                                                     <img src="images/uploads/play-vd.png" alt=""></a>
                                                             </div>
                                                         </div>
-                                                        <div class="title-hd-sm">
+                                                        <%-- <div class="title-hd-sm">
                                                             <h4>cast</h4>
                                                             <a href="#" class="time">Full Cast & Crew  <i class="ion-ios-arrow-right"></i></a>
-                                                        </div>
+                                                        </div>--%>
                                                         <!-- movie cast -->
                                                         <div class="mvcast-item">
                                                             <asp:Repeater runat="server" ID="rptCast">
@@ -76,13 +76,13 @@
                                                         <!-- movie user review -->
 
                                                     </div>
-                                                    <div class="col-md-4 col-xs-12 col-sm-12">
+                                                    <%--<div class="col-md-4 col-xs-12 col-sm-12">
                                                         <div class="sb-it">
                                                             <h6>Director: </h6>
                                                             <p>
-                                                                <asp:Repeater runat="server" ID="rptDirectors" >
+                                                                <asp:Repeater runat="server" ID="rptDirectors">
                                                                     <ItemTemplate>
-                                                                        <%--<a href="#"><%# ((TvShowCollection.ENT.ActorENT)Container.DataItem).Name.ToString() %></a>--%>
+                                                                        <a href="#"><%# ((TvShowCollection.ENT.ActorENT)Container.DataItem).Name.ToString() %></a>
                                                                     </ItemTemplate>
                                                                 </asp:Repeater>
                                                             </p>
@@ -124,10 +124,10 @@
                                                         <div class="ads">
                                                             <img src="images/uploads/ads1.png" alt="">
                                                         </div>
-                                                    </div>
+                                                    </div>--%>
                                                 </div>
                                             </div>
-                                            <div id="reviews" class="tab review">
+                                            <%--<div id="reviews" class="tab review">
                                                 <div class="row">
                                                     <div class="rv-hd">
                                                         <div class="div">
@@ -822,7 +822,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>--%>
                                         </div>
                                     </div>
                                 </div>

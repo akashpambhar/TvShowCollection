@@ -43,11 +43,20 @@
             "Home",
             "~/Default.aspx");
         
-        //Contact Routes        
         routes.MapPageRoute(
             "Route_Default_SingleShow",
             "Show/{ShowID}",
             "~/AdminPanel/SingleShow.aspx");
+
+        routes.MapPageRoute(
+            "Route_Default_TvShowList",
+            "Show",
+            "~/AdminPanel/TvShowList.aspx");
+        
+        routes.MapPageRoute(
+            "Route_Default_TvShowList_Search",
+            "Show/Search/{SearchQuery}",
+            "~/AdminPanel/TvShowList.aspx");
     }
        
 </script>
